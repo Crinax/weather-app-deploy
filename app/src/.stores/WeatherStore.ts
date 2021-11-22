@@ -15,7 +15,6 @@ class WeatherStore {
       async ({ coords }) => await this.setWeatherData(coords),
       (err) => {
         this.weatherData  = { code: 502, message: 'Geoposition error: enable GPS or try to reload page' };
-        console.log(err);
       },
       { enableHighAccuracy: true }
     );

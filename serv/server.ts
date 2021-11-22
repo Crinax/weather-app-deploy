@@ -25,5 +25,3 @@ app.use('/api/:version/:method', async (req, res) => {
 });
 
 app.listen(port);
-
-console.log(`Server started at http://localhost:${process.env.PORT}`);

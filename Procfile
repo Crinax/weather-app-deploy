@@ -1,1 +1,3 @@
-worker: yarn && yarn start
+init: yarn
+web: yarn serve
+worker: yarn run-app
