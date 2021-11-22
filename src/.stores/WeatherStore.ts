@@ -28,6 +28,7 @@ class WeatherStore {
   private async corsRequest<T>(url: string) {
     const headers = {
       'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'X-Requested-With',
     };
     const result = await axios({
       method: 'GET',
