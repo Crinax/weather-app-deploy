@@ -1,20 +1,51 @@
 {
-  "name": "weather-app",
-  "version": "1.0.0",
-  "description": "Application on React that shows weather",
-  "scripts": {
-    "install": "yarn --cwd ./serv && yarn --cwd ./app",
-    "serve": "yarn --cwd ./serv start",
-    "run-app": "yarn --cwd ./app build",
-    "start": "yarn serve & yarn run-app"
-  },
-  "repository": "https://github.com/Crinax/weather-app.git",
-  "author": "Crinax <agreedeth@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^16.11.7"
-  },
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "mobx-react-lite": "^3.2.2"
-  }
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "mobx": "^6.3.7",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/node-sass": "^4.11.2"
+  },
+  "proxy": "http://localhost:5000"
 }

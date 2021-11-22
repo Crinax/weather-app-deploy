@@ -1,62 +1,46 @@
-# Weather App
+# Getting Started with Create React App
 
-## About
-Application on React that shows weather  
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Installation
-- Clone repo
-- Inside the root of project directory run `yarn`. **Attention**: Use only yarn
-- The next step: inside of `serv` dir create `.env` file with next contents:
-```env
-	PORT="<Your free port for server>"
-	MAPQUEST_KEY="<API key for MapQuest>"
-	OPENWEATHER_KEY="<API key for OpenWeather>"
-```
-- And inside of `app` dir create `.env` file with next contents:
-```env
-	REACT_APP_SERVER_PORT="<Server port from the previous step>"
-```
-- In root of project run:
-- 1. `yarn serve` - run server
-- 2. `yarn run-app` - run react app (frontent)
-- 3. `yarn start` - run both server and react app (probably work only on Linux)
+## Available Scripts
 
-## API methods
-API default path: `http://localhost:{PORT}/api/v1`
+In the project directory, you can run:
 
-### Methods
-- `/weather?latitude={latitude}&longitude={longitude}` - get the weather for this coordinates
+### `yarn start`
 
-### Response fields
-- Get the weather for this coordinates
-	- `code: number` - code of request (possible codes: 200, 400, 500).
-	- `messgae: string` - message status (for response code 200 message equals "ok", for another code message equals error description).
-	- `data?: object` - exists only whith `code = 200`. Contains answer for request.
-		- `city: object` - contains data of geo position.
-			- `country: string` - country.
-			- `state: string` - state.
-			- `stateCountry: string` - state (smaller than previous).
-			- `city: string` - city.
-			- `neighborhood: string` - neighborhood.
-			- `street: string` - street.
-		- `weather: object` - contains data of weather.
-			- `main: string` - group of the weather.
-			- `description: string` - detailed name of the weather.
-			- `temperature: object` - data of temperature.
-				- `data: object` - contains meteorological temperature
-					- `kelvin: number` - temperature in Kelvin.
-					- `celsius: number` - temperature in Celsius.
-					- `farenheit: number` - temperature in Farenheit.
-				- `feels: object` - contains feels like temperature
-					- `kelvin: number` - temperature in Kelvin.
-					- `celsius: number` - temperature in Celsius.
-					- `farenheit: number` - temperature in Farenheit.
-			- `pressure: number` - pressure.
-			- `humidity: number` - humidity.
-			- `wind: object` - contains data of wind.
-				- `speed: number` - speed.
-				- `deg: number` - direction.
-				- `gust: number` - gust.
-			- `clouds: number` - persentage of cloud cover.
-			- `sunrise: number` - time of sunrise for this day.
-			- `sunset: number` - time of sunset for this day.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
