@@ -5,7 +5,7 @@
   "scripts": {
     "install": "yarn --cwd ./serv && yarn --cwd ./app",
     "serve": "yarn --cwd ./serv start",
-    "run-app": "yarn --cwd ./app start",
+    "run-app": "yarn --cwd ./app build",
     "start": "yarn serve & yarn run-app"
   },
   "repository": "https://github.com/Crinax/weather-app.git",

@@ -38,8 +38,7 @@ class WeatherStore {
   }
 
   private async sendRequest({ latitude, longitude }: CoordsType) {
-    const baseUrl = `http://localhost:${process.env.REACT_APP_SERVER_PORT}`;
-    const url = `${baseUrl}/api/v1/weather?&latitude=${latitude}&longitude=${longitude}`;
+    const url = `/api/v1/weather?&latitude=${latitude}&longitude=${longitude}`;
 
     return await this.corsRequest<ResponseType>(url);
   }
