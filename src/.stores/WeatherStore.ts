@@ -39,7 +39,7 @@ class WeatherStore {
   }
 
   private async sendRequest({ latitude, longitude }: CoordsType) {
-    const url = `https://crinax-weather-app-server/api/v1/weather?&latitude=${latitude}&longitude=${longitude}`;
+    const url = `https://crinax-weather-app-server.herokuapp.com/api/v1/weather?&latitude=${latitude}&longitude=${longitude}`;
 
     return await this.corsRequest<ResponseType>(url);
   }
