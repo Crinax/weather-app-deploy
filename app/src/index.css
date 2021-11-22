@@ -1,0 +1,80 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+
+* {
+  --day-bg-color: #10b7b7;
+  --night-bg-color: #001b59;
+  --cloudy-bg-color: #7a808f;
+  --thunder-bg-color: #2b3937;
+  --rain-bg-color: #4b8379;
+  --snow-bg-color: #98c6ff;
+  --fog-bg-color: #aeaeae;
+
+  --day-opac-bg-color: #10b7b7a0;
+  --night-opac-bg-color: #001b59a0;
+  --cloudy-opac-bg-color: #7a808fc0;
+  --thunder-opac-bg-color: #2b3937a0;
+  --rain-opac-bg-color: #4b8379a0;
+  --snow-opac-bg-color: #98c6ffa0;
+  --fog-opac-bg-color: #aeaeaea0;
+
+  font-weight: bolder;
+  transition: .25s;
+}
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 460px) {
+  body {
+    letter-spacing: 0;
+  }
+}
+
+
+@font-face {
+  font-family: "dripicons-weather";
+  src:url("./fonts/dripicons-weather.eot");
+  src:url("./fonts/dripicons-weather.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/dripicons-weather.woff") format("woff"),
+    url("./fonts/dripicons-weather.ttf") format("truetype"),
+    url("./fonts/dripicons-weather.svg#dripicons-weather") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "dripicons-weather" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+}
+
+[class^="diw-"]:before,
+[class*=" diw-"]:before {
+  font-family: "dripicons-weather" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+}
