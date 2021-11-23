@@ -5,18 +5,29 @@ import { CoordsType, ResponseType } from '../types';
 class WeatherStore {
   constructor() {
     makeAutoObservable(this);
-    this.weatherData = { code: 0, message: 'Not sended' }
+    this.weatherData = { code: 0, message: 'Not sended' };
   }
 
+  private interval!: NodeJS.Timeout;
   weatherData: ResponseType;
 
-  async init() {
+  private async findLocation() {
+    console.log(100);
     navigator.geolocation.getCurrentPosition(
       async ({ coords }) => await this.setWeatherData(coords),
       (err) => {
         this.weatherData  = { code: 502, message: 'Geoposition error: enable GPS or try to reload page' };
+        console.log(err);
       },
       { enableHighAccuracy: true }
+    );
+  }
+
+  async init() {
+    await this.findLocation();
+    this.interval = setInterval(
+      async () => await this.findLocation(),
+      180000,
     );
   }
 
